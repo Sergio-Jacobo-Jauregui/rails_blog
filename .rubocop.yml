@@ -1,1 +1,70 @@
-inherit_from: .rubocop_todo.yml
+require: rubocop-rails
+
+AllCops:
+  SuggestExtensions: false
+
+# ---- Layout ----
+Layout/HashAlignment:
+  Exclude:
+    - 'lib/tasks/auto_annotate_models.rake'
+
+# Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, AllowedPatterns.
+# URISchemes: http, https
+Layout/LineLength:
+  Max: 198
+
+
+# ---- Rails ----
+Rails/RakeEnvironment:
+  Exclude:
+    - lib/tasks/auto_annotate_models.rake
+
+
+# ---- Style ----
+Style/Documentation:
+  Enabled: false
+
+# Configuration parameters: AllowedConstants.
+Style/Documentation:
+  Exclude:
+    - 'spec/**/*'
+    - 'test/**/*'
+    - 'app/helpers/application_helper.rb'
+    - 'app/mailers/application_mailer.rb'
+    - 'app/models/application_record.rb'
+    - 'config/application.rb'
+
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: always, always_true, never
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - 'lib/tasks/auto_annotate_models.rake'
+
+Style/IfUnlessModifier:
+  Exclude:
+    - 'bin/bundle'
+
+Style/Documentation:
+  Enabled: false
+
+
+# ---- Metrics ----
+# Configuration parameters: CountComments, CountAsOne, AllowedMethods, AllowedPatterns.
+# AllowedMethods: refine
+Metrics/BlockLength:
+  Max: 47
+
+# Configuration parameters: AllowedMethods, AllowedPatterns.
+Metrics/CyclomaticComplexity:
+  Max: 9
+
+# Configuration parameters: CountComments, CountAsOne, AllowedMethods, AllowedPatterns.
+Metrics/MethodLength:
+  Max: 12
+
+# Configuration parameters: AllowedMethods, AllowedPatterns.
+Metrics/PerceivedComplexity:
+  Max: 9
+
+
+
