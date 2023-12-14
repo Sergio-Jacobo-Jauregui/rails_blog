@@ -111,6 +111,10 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     drb (2.2.0)
       ruby2_keywords
     erubi (1.12.0)
@@ -163,6 +167,7 @@ GEM
     parser (3.2.2.4)
       ast (~> 2.4.1)
       racc
+    pg (1.5.4)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -297,8 +302,10 @@ DEPENDENCIES
   capybara
   debug
   devise (~> 4.9)
+  dotenv-rails (~> 2.8.1)
   importmap-rails
   jbuilder
+  pg (~> 1.1)
   pry (~> 0.14.2)
   puma (>= 5.0)
   rails (~> 7.1.1)

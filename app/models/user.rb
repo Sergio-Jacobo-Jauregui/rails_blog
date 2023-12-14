@@ -4,7 +4,7 @@
 #
 # Table name: users
 #
-#  id                     :integer          not null, primary key
+#  id                     :bigint           not null, primary key
 #  confirmation_sent_at   :datetime
 #  confirmation_token     :string
 #  confirmed_at           :datetime
@@ -20,6 +20,7 @@
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string
 #  sign_in_count          :integer          default(0), not null
+#  unconfirmed_email      :string
 #  unlock_token           :string
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null

@@ -4,11 +4,11 @@
 #
 # Table name: comments
 #
-#  id         :integer          not null, primary key
+#  id         :bigint           not null, primary key
 #  body       :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  post_id    :integer          not null
+#  post_id    :bigint           not null
 #
 # Indexes
 #
@@ -16,7 +16,7 @@
 #
 # Foreign Keys
 #
-#  post_id  (post_id => posts.id)
+#  fk_rails_...  (post_id => posts.id)
 #
 class Comment < ApplicationRecord
   belongs_to :post

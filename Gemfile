@@ -48,6 +48,10 @@ gem 'bootsnap', require: false
 
 gem 'devise', '~> 4.9'
 
+gem 'dotenv-rails', '~> 2.8.1'
+
+gem 'pg', '~> 1.1'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri windows]
