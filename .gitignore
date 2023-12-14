@@ -36,3 +36,6 @@
 
 # tailwnd dependences
 /node_modules
+
+# env vars
+.env
