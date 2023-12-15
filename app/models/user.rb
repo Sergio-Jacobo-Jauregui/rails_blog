@@ -38,8 +38,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable,
          :confirmable, :lockable, :timeoutable, :validatable,
          timeout_in: 20.minutes, maximum_attempts: 3, lock_strategy: :failed_attempts,
-         unlock_strategy: :both, unlock_in: 3.minutes, unlock_keys: %i[email username],
-         reset_password_keys: %i[email username], reset_password_within: 10.minutes,
+         unlock_strategy: :both, unlock_in: 3.minutes, unlock_keys: %i[email],
+         reset_password_keys: %i[email], reset_password_within: 10.minutes,
          sign_in_after_reset_password: false, remember_for: 5.minutes,
          email_regexp: /\A[^@\s]+@gmail\.com\z/, password_length: 8..128
 end
