@@ -1,0 +1,29 @@
+<div class="p-24">
+  <div class="flex-center p-7 card mb-9">
+    <div class="h-32 w-32 bg-blue-200">Profile Photo</div>
+    <div class="m-1.5"><%= @user.name %></div>
+    <div class="m-1.5"><%= @user.last_name %></div>
+    <div class="m-1.5"><%= @user.email %></div>
+  </div>
+  <div class="flex justify-between gap-x-7">
+    <div class="card p-7">
+      <div class="my-4 ml-40 text-3xl">Public Posts</div>
+      <% @public_posts.each do |public_post| %>
+        <div class="mb-9">
+          <div class="font-bold text-xl mb-2"><%= public_post.title %></div>
+          <div><%= public_post.text %></div>
+        </div>
+      <% end %>
+    </div>
+    <div class="card p-7">
+    <%# TODO: ADD cancancan %>
+      <div class="my-4 ml-40 text-3xl">Private Posts</div>
+      <% @private_posts.each do |private_post| %>
+        <div class="mb-9">
+          <div class="font-bold text-xl mb-2"><%= private_post.title %></div>
+          <div><%= private_post.text %></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -15,4 +15,5 @@ Rails.application.routes.draw do
 
   get 'up' => 'rails/health#show', as: :rails_health_check
   get '/index', to: 'index#index', as: 'principal_page'
+  get '/profile/:user_id', to: 'profile#index', as: 'user_profile'
 end

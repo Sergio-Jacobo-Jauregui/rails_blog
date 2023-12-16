@@ -1,11 +1,12 @@
 <div class="flex p-6">
-  <div class="w-1/4 p-6 m-3 bg-gray-100 flex flex-col items-center">
+  <div class="w-1/4 p-6 m-3 bg-gray-100 flex-center">
     <div class="m-1.5"><%= @user.name %></div>
     <div class="m-1.5"><%= @user.last_name %></div>
     <%# TODO: add: profiles photos %>
     <%# TODO: add: pagy %>
     <div class="h-32 w-32 bg-blue-200">Profile Photo</div>
     <div class="m-1.5"><%= @user.email %></div>
+    <div><%= button_to "Go to profile", user_profile_path(user_id: @user.id), method: :get %></div>
   </div>
 
   <div class="w-3/4 p-8 m-3 bg-gray-100">

@@ -6,8 +6,12 @@
   .absolute-center {
     @apply flex flex-col absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
   }
+  
+  .flex-center {
+    @apply flex flex-col items-center;
+  }
 
-  .auth-card {
+  .card {
     @apply bg-gray-300 p-3 rounded-xl;
   }
 }
