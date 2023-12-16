@@ -11,14 +11,14 @@ This is a project base to create a blog, its objective is not to be a blog, but 
   * ActiveRecord Import, for sql performance
   * Ahoy, for tracking
   * Cancancan, for permissions
-  * Figrao, for secrets manager
+  * dotenv-rails, for secrets manager ✔️
     
 * Development:
-  * Pry, for debuggin
+  * Pry, for debuggin ✔️
   * RSpec, for testing
   * Factory Bot, for testing
   * Faker, for testing
-  * Rubocop, for best practices
+  * Rubocop, for best practices ✔️
   * SimpleCov, for testing
 
 
