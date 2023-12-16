@@ -2,15 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.auth-card {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-  padding: 0.75rem;
-  border-radius: 0.75rem;
+@layer components {
+  .absolute-center {
+    @apply flex flex-col absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .auth-card {
+    @apply bg-gray-300 p-3 rounded-xl;
+  }
 }

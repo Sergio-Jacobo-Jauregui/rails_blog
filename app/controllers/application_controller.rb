@@ -5,16 +5,18 @@ class ApplicationController < ActionController::Base
   before_action :user_is_authenticated
 
   def user_is_authenticated
-    user_signed_in?
+    @user_is_authenticated = user_signed_in?
   end
 
-  def after_sign_in_path_for()
+  # rubocop:disable Lint/UnusedMethodArgument
+  def after_sign_in_path_for(resource)
     principal_page_path
   end
 
-  def after_sign_up_path_for()
+  def after_sign_up_path_for(resource)
     principal_page_path
   end
+  # rubocop:enable Lint/UnusedMethodArgument
 
   protected
 

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
     passwords: 'users/passwords',
     unlocks: 'users/unlocks',
-    confirmations: 'users/confirmations',
+    confirmations: 'users/confirmations'
   }
 
   resources :posts

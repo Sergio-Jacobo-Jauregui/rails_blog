@@ -1,0 +1,13 @@
+<nav>
+  <ul class="flex justify-end h-10 items-center bg-gray-300">
+    <li class="px-2.5"><%= link_to "Sign Up", "/users/sign_up" %><br /></li>
+
+  
+    <% if @user_is_authenticated %>
+      <li class="px-2.5"><%= button_to "Log Out", destroy_user_session_path, method: :delete %></li>
+    <% else %>
+      <li class="px-2.5"><%= link_to "Sign In", "/users/sign_in" %><br /></li>
+    <% end %>
+  
+  </ul>
+</nav>
